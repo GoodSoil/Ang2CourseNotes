@@ -1,0 +1,4 @@
+{
+  "port": 7777,
+  "files": ["./**/*.{html,htm,css,js}"]
+}

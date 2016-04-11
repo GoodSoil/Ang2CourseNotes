@@ -1,0 +1,299 @@
+{
+  "version": "00.01.01.002",
+  "nav": [
+    {
+      "category": "about",
+      "title": "Home",
+      "pages": [
+        {
+          "version": "draft",
+          "id": "default",
+          "title": "Home (Overview)",
+          "tooltip": "",
+          "doc": "home.html"
+        },
+        {
+          "version": "draft",
+          "id": "colophon",
+          "title": "Colophon",
+          "tooltip": "Information on the tools/technology used in making this site",
+          "doc": "about/colophon.html"
+        }
+      ]
+    },
+    {
+      "category": "normalization",
+      "title": "Normalization",
+      "pages": [
+        {
+          "version": "draft",
+          "id": "default",
+          "title": "Normalization Overview",
+          "tooltip": "",
+          "doc": "home.html"
+        },
+        {
+          "version": "_tba_",
+          "id": "01",
+          "title": "The Entity Relationship Diagram",
+          "tooltip": "",
+          "doc": "topics/.html"
+        },
+        {
+          "version": "_tba_",
+          "id": "02",
+          "title": "Reading ERDs",
+          "tooltip": "",
+          "doc": "topics/.html"
+        },
+        {
+          "version": "_tba_",
+          "id": "03",
+          "title": "Normalization",
+          "tooltip": "",
+          "doc": "topics/.html"
+        },
+        {
+          "version": "_tba_",
+          "id": "04",
+          "title": "Drawing ERDs",
+          "tooltip": "",
+          "doc": "topics/.html"
+        }
+      ]
+    },
+    {
+      "category": "ddl",
+      "title": "DDL in SQL",
+      "pages": [
+        {
+          "version": "draft",
+          "id": "00",
+          "title": "DDL in SQL",
+          "tooltip": "",
+          "doc": "topics/DDL/default.html"
+        },
+        {
+          "version": "draft",
+          "id": "01",
+          "title": "Create Table",
+          "tooltip": "",
+          "doc": "topics/DDL/createTable.html"
+        },
+        {
+          "version": "draft",
+          "id": "02",
+          "title": "Primary Keys",
+          "tooltip": "",
+          "doc": "topics/DDL/primaryKey.html"
+        },
+        {
+          "version": "draft",
+          "id": "03",
+          "title": "Foreign Keys",
+          "tooltip": "",
+          "doc": "topics/DDL/foreignKey.html"
+        },
+        {
+          "version": "draft",
+          "id": "04",
+          "title": "Default Constraints",
+          "tooltip": "",
+          "doc": "topics/DDL/defaultConstraint.html"
+        },
+        {
+          "version": "draft",
+          "id": "05",
+          "title": "Check Constraints",
+          "tooltip": "",
+          "doc": "topics/DDL/checkConstraint.html"
+        },
+        {
+          "version": "draft",
+          "id": "06",
+          "title": "Unique Constraints",
+          "tooltip": "",
+          "doc": "topics/DDL/uniqueContraint.html"
+        },
+        {
+          "version": "draft",
+          "id": "07",
+          "title": "Alter Table",
+          "tooltip": "Modifying Existing Databases",
+          "doc": "topics/.html"
+        },
+        {
+          "version": "draft",
+          "id": "08",
+          "title": "Create View",
+          "tooltip": "",
+          "doc": "topics/DDL/createView.html"
+        },
+        {
+          "version": "draft",
+          "id": "espdb",
+          "title": "ESP Demo",
+          "tooltip": "",
+          "doc": "demos/esp/default.html"
+        }
+      ]
+    },
+    {
+      "category": "dml",
+      "title": "DML in SQL",
+      "pages": [
+        {
+          "version": "draft",
+          "id": "default",
+          "title": "Home (Overview)",
+          "tooltip": "",
+          "doc": "home.html"
+        },
+        {
+          "version": "_tba_",
+          "id": "",
+          "title": "Insert",
+          "tooltip": "",
+          "doc": "topics/.html"
+        },
+        {
+          "version": "_tba_",
+          "id": "",
+          "title": "Update",
+          "tooltip": "",
+          "doc": "topics/.html"
+        },
+        {
+          "version": "_tba_",
+          "id": "",
+          "title": "Delete",
+          "tooltip": "",
+          "doc": "topics/.html"
+        }
+      ]
+    },
+    {
+      "category": "queries",
+      "title": "SQL Queries",
+      "pages": [
+        {
+          "version": "draft",
+          "id": "default",
+          "title": "Queries Overview",
+          "tooltip": "",
+          "doc": "topics/SQL/default.html"
+        },
+        {
+          "version": "draft",
+          "id": "01",
+          "title": "Simple SQL Queries",
+          "tooltip": "",
+          "doc": "topics/SQL/simpleQueries.html"
+        },
+        {
+          "version": "draft",
+          "id": "02",
+          "title": "String Functions",
+          "tooltip": "",
+          "doc": "topics/SQL/stringFunctions.html"
+        },
+        {
+          "version": "draft",
+          "id": "03",
+          "title": "Date Functions",
+          "tooltip": "",
+          "doc": "topics/SQL/dateFunctions.html"
+        },
+        {
+          "version": "draft",
+          "id": "04",
+          "title": "Aggregate Functions",
+          "tooltip": "",
+          "doc": "topics/SQL/aggregateFunctions.html"
+        },
+        {
+          "version": "draft",
+          "id": "05",
+          "title": "Aggregates and Group By",
+          "tooltip": "",
+          "doc": "topics/SQL/aggregateGroupBy.html"
+        },
+        {
+          "version": "draft",
+          "id": "06",
+          "title": "Inner Joins",
+          "tooltip": "",
+          "doc": "topics/SQL/innerJoins.html"
+        },
+        {
+          "version": "draft",
+          "id": "07",
+          "title": "Outer Joins",
+          "tooltip": "",
+          "doc": "topics/SQL/outerJoins.html"
+        },
+        {
+          "version": "draft",
+          "id": "08",
+          "title": "Subqueries",
+          "tooltip": "",
+          "doc": "topics/SQL/subqueries.html"
+        },
+        {
+          "version": "draft",
+          "id": "09",
+          "title": "Unions",
+          "tooltip": "",
+          "doc": "topics/SQL/unions.html"
+        }
+      ]
+    },
+    {
+      "category": "sprocs",
+      "title": "Stored Procedures",
+      "pages": [
+        {
+          "version": "draft",
+          "id": "default",
+          "title": "Home (Overview)",
+          "tooltip": "",
+          "doc": "home.html"
+        },
+        {
+          "version": "_tba_",
+          "id": "",
+          "title": "Database-Level Transactions",
+          "tooltip": "",
+          "doc": "topics/.html"
+        },
+        {
+          "version": "draft",
+          "id": "colophon",
+          "title": "Colophon",
+          "tooltip": "Information on the tools/technology used in making this site",
+          "doc": "about/colophon.html"
+        }
+      ]
+    },
+    {
+      "category": "triggers",
+      "title": "Triggers",
+      "pages": [
+        {
+          "version": "draft",
+          "id": "default",
+          "title": "Home (Overview)",
+          "tooltip": "",
+          "doc": "home.html"
+        },
+        {
+          "version": "draft",
+          "id": "colophon",
+          "title": "Colophon",
+          "tooltip": "Information on the tools/technology used in making this site",
+          "doc": "about/colophon.html"
+        }
+      ]
+    }
+  ]
+}
