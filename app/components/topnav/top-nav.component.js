@@ -24,13 +24,16 @@ System.register(['angular2/core', 'angular2/router'], function(exports_1, contex
             TopNavComponent = (function () {
                 function TopNavComponent() {
                 }
+                TopNavComponent.prototype.onSelect = function () {
+                };
                 TopNavComponent = __decorate([
                     core_1.Component({
                         selector: 'top-nav-bar',
                         inputs: ['tableOfContents'],
-                        template: "<nav class=\"navbar navbar-light bg-faded\">\n  <a class=\"navbar-brand\" href=\"#\">Navbar</a>\n  <ul class=\"nav navbar-nav\">\n    <li class=\"nav-item active\">\n      <a class=\"nav-link\" [routerLink]=\"['HomePage']\">Home <span class=\"sr-only\">(current)</span></a>\n    </li>\n    <li class=\"nav-item\">\n      <a class=\"nav-link\" [routerLink]=\"['ContentPage']\">Features</a>\n    </li>\n  </ul>\n  <form class=\"form-inline pull-xs-right\">\n    <input class=\"form-control\" type=\"text\" placeholder=\"Search\">\n    <button class=\"btn btn-success-outline\" type=\"submit\">Search</button>\n  </form>\n</nav>\n<br />\n<pre>{{ tableOfContents | json }}</pre>\n",
+                        template: "<nav class=\"navbar navbar-light bg-faded\">\n  <a class=\"navbar-brand\" [routerLink]=\"['HomePage']\">Navbar</a>\n  <!-- <ul class=\"nav navbar-nav\">\n    <li class=\"nav-item active\">\n      <a class=\"nav-link\" [routerLink]=\"['HomePage']\">Home <span class=\"sr-only\">(current)</span></a>\n    </li>\n  </ul> -->\n  <ul class=\"nav navbar-nav\" *ngIf=\"tableOfContents\">\n    <li *ngFor=\"#topNav of tableOfContents.nav\" class=\"nav-item\">\n      <a class=\"nav-link\" (click)=\"onSelect(topNav)\">{{topNav.title}}</a>\n    </li>\n  </ul>\n  <form class=\"form-inline pull-xs-right\">\n    <input class=\"form-control\" type=\"text\" placeholder=\"Search\">\n    <button class=\"btn btn-success-outline\" type=\"submit\">Search</button>\n  </form>\n</nav>\n<br />\n<router-outlet name=\"dynamicContent\"></router-outlet>\n<pre>{{ tableOfContents | json }}</pre>\n",
                         directives: [router_1.ROUTER_DIRECTIVES]
-                    }), 
+                    }),
+                    router_1.RouteConfig([]), 
                     __metadata('design:paramtypes', [])
                 ], TopNavComponent);
                 return TopNavComponent;

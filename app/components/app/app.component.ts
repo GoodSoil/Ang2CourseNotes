@@ -18,7 +18,7 @@ import {TocService} from '../../services/toc.service';
 })
 @RouteConfig([
    { path:'/', name: 'HomePage', component: HomeComponent, useAsDefault: true },
-   { path:'/content/', name: 'ContentPage', component: DynamicContentComponent },
+   { path:'/:content/', component: DynamicContentComponent },
 //   { path:'/content/:path', name: 'ContentPage', component: DynamicContentComponent }
 //   {path:'/crisis-center', name: 'CrisisCenter', component: CrisisListComponent},
 //   {path:'/heroes',        name: 'Heroes',       component: HeroListComponent}

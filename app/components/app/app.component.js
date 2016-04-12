@@ -57,7 +57,7 @@ System.register(['angular2/core', 'angular2/router', '../copyright/copyright.com
                     }),
                     router_1.RouteConfig([
                         { path: '/', name: 'HomePage', component: home_component_1.HomeComponent, useAsDefault: true },
-                        { path: '/content/', name: 'ContentPage', component: dynamic_content_component_1.DynamicContentComponent },
+                        { path: '/:content/', component: dynamic_content_component_1.DynamicContentComponent },
                     ]),
                     core_2.Injectable(), 
                     __metadata('design:paramtypes', [toc_service_1.TocService])
