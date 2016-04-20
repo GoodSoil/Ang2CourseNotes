@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/router', '../copyright/copyright.component', '../home/home.component', '../dynamiccontent/dynamic-content.component', '../topnav/top-nav.component', '../../services/toc.service'], function(exports_1, context_1) {
+System.register(['angular2/core', 'angular2/router', '../copyright/copyright.component', '../home/home.component', '../dynamiccontent/dynamic-content.component', '../topnav/top-nav.component', '../listlink/list-link.component', '../../services/toc.service'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', 'angular2/router', '../copyright/copyright.com
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, core_2, router_1, copyright_component_1, home_component_1, dynamic_content_component_1, top_nav_component_1, toc_service_1;
+    var core_1, core_2, router_1, copyright_component_1, home_component_1, dynamic_content_component_1, top_nav_component_1, list_link_component_1, toc_service_1;
     var AppComponent;
     return {
         setters:[
@@ -33,6 +33,9 @@ System.register(['angular2/core', 'angular2/router', '../copyright/copyright.com
             function (top_nav_component_1_1) {
                 top_nav_component_1 = top_nav_component_1_1;
             },
+            function (list_link_component_1_1) {
+                list_link_component_1 = list_link_component_1_1;
+            },
             function (toc_service_1_1) {
                 toc_service_1 = toc_service_1_1;
             }],
@@ -40,6 +43,46 @@ System.register(['angular2/core', 'angular2/router', '../copyright/copyright.com
             AppComponent = (function () {
                 function AppComponent(tocService) {
                     this.tocService = tocService;
+                    this.myNodes = [
+                        {
+                            text: 'One',
+                            value: '1',
+                            children: [
+                                {
+                                    text: 'One.ChildA',
+                                    value: '1A',
+                                    children: [
+                                        {
+                                            text: 'One.ChildA.Grandchild',
+                                            value: '1Aa',
+                                            children: []
+                                        },
+                                    ]
+                                },
+                                {
+                                    text: 'One.ChildB',
+                                    value: '1B',
+                                    children: []
+                                }
+                            ]
+                        },
+                        {
+                            text: 'Two',
+                            value: '2',
+                            children: [
+                                {
+                                    text: 'Two.ChildA',
+                                    value: '2A',
+                                    children: []
+                                },
+                            ]
+                        },
+                        {
+                            text: 'Three',
+                            value: '3',
+                            children: []
+                        },
+                    ];
                 }
                 AppComponent.prototype.ngOnInit = function () {
                     this.get();
@@ -52,7 +95,7 @@ System.register(['angular2/core', 'angular2/router', '../copyright/copyright.com
                     core_1.Component({
                         selector: 'my-app',
                         templateUrl: './app/components/app/app.component.html',
-                        directives: [copyright_component_1.CopyrightComponent, top_nav_component_1.TopNavComponent, router_1.RouterOutlet],
+                        directives: [copyright_component_1.CopyrightComponent, top_nav_component_1.TopNavComponent, router_1.RouterOutlet, list_link_component_1.LinkListComponent],
                         providers: [toc_service_1.TocService]
                     }),
                     router_1.RouteConfig([

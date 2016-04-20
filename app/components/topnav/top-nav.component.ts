@@ -1,5 +1,7 @@
 import {Component} from 'angular2/core';
-import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
+import {NgClass} from 'angular2/common';
+
+import {RouteConfig, Router, ROUTER_DIRECTIVES} from 'angular2/router';
 
 @Component({
     selector: 'top-nav-bar',
@@ -13,7 +15,7 @@ import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
   </ul> -->
   <ul class="nav navbar-nav" *ngIf="tableOfContents">
     <li *ngFor="#topNav of tableOfContents.nav" class="nav-item">
-      <a class="nav-link" (click)="onSelect(topNav)">{{topNav.title}}</a>
+      <a class="nav-link" [ngClass]="{active: topNav===currentNav}" (click)="onSelect(topNav)">{{topNav.title}}</a>
     </li>
   </ul>
   <form class="form-inline pull-xs-right">
@@ -23,7 +25,9 @@ import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 </nav>
 <br />
 <router-outlet name="dynamicContent"></router-outlet>
-<pre>{{ tableOfContents | json }}</pre>
+<details><summary class="h4">tableOfContents</summary><pre>{{ tableOfContents | json }}</pre></details>
+<details><summary class="h4">currentNav</summary><pre>{{ currentNav | json }}</pre></details>
+
 `,
     directives: [ROUTER_DIRECTIVES]
 })
@@ -33,8 +37,10 @@ import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 ])
 export class TopNavComponent {
     public tableOfContents: any;
-    
-    onSelect() {
+    private currentNav: any;
+    constructor(private _router: Router) {}
+    onSelect(nav) {
+        this.currentNav = nav;
         
     }
 }

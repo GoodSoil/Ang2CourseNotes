@@ -1,0 +1,58 @@
+<h1>The Build and Development Environment</h1>
+
+<h2>A Static Angular 2 Site for GitHub Pages</h2>
+<p>Websites hosted on GitHub Pages are, by nature, static sites. The common convention for most
+    sites on GitHub is to be based on Jekyll. Individual pages are.
+</p>
+<ul>
+    <li>Use CDN for script tags in index page</li>
+    <li>node_modules not stored in repository (so can't rely on them on host)</li>
+    <li>typescript files are stored in the repo, but I only want compiled javascript
+         - set TypeScript compiler to pre-compile</li>
+    <li>GitHub hides anything in a folder starting with an underscore</li>
+</ul>
+
+
+<h2>package.json</h2>
+
+<pre><code>{
+    "name": "course-notes-framework",
+    "version": "1.0.0",
+    "description": "An Angular 2 SPA framework for showing static content on sites such as github.io.",
+    "repository": {
+        "type": "",
+        "url": ""
+    },
+    "scripts": {
+        "start": "concurrent \"npm run tsc:w\" \"npm run lite\"",
+        "tsc": "tsc",
+        "tsc:w": "tsc -w",
+        "lite": "lite-server",
+        "typings": "typings",
+        "postinstall": "typings install"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "angular2": "2.0.0-beta.14",
+        "systemjs": "0.19.25",
+        "es6-promise": "^3.1.2",
+        "es6-shim": "^0.35.0",
+        "reflect-metadata": "0.1.2",
+        "rxjs": "5.0.0-beta.2",
+        "zone.js": "0.6.10"
+    },
+    "devDependencies": {
+        "concurrently": "^2.0.0",
+        "lite-server": "^2.2.0",
+        "typescript": "^1.8.9",
+        "typings": "^0.7.12"
+    }
+}</code></pre>
+
+<h2>tsconfig.json</h2>
+
+<h2>typings.json</h2>
+
+<h2>tslint.json</h2>
+
+<h2>bs-config.json</h2>
